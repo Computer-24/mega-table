@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="star.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-toggle" id="theme-toggle">🌚</div>
+    <div class="container">
+        <h1>Most Active Users</h1>
+        <div class="spinner" id="spinner" style="display: none">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <table id="data-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)" class="name-column">Name <i class="fas fa-sort" id="icon-0"></i></th>
+                    <th onclick="sortTable(1)" class="email-column">Email <i class="fas fa-sort" id="icon-1"></i></th>
+                    <th onclick="sortTable(2)" class="username-column">Username <i class="fas fa-sort" id="icon-2"></i></th>
+                    <th onclick="sortTable(3)" class="country-column">Country <i class="fas fa-sort" id="icon-3"></i></th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td data-label="Name">Email Here</td>
+                    <td data-label="Email">Name Here</td>
+                    <td data-label="Username">Username Here</td>
+                    <td data-label="Country">Country Here</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination" id="pagination" style="display: none;">
+            <button type="button" id="prev-btn" title="Previous Page" onclick="prevPage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <span id="page-number">1</span>   
+            <button type="button" id="next-btn" title="Next Page" onclick="nextPage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
